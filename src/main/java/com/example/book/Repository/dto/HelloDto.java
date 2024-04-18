@@ -1,7 +1,6 @@
-package com.example.book.domain.dto;
+package com.example.book.Repository.dto;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Getter

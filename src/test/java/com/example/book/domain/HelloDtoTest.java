@@ -1,8 +1,8 @@
-package com.example.book.domain.dto;
+package com.example.book.domain;
 
+import com.example.book.Repository.dto.HelloDto;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
 class HelloDtoTest {
