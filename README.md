@@ -1,11 +1,11 @@
-domain pakage = 데이터베이스 테이블들 모아두는 곳
+**domain package** = 데이터베이스 테이블들 모아두는 곳
 Ex) User Table , DTO
 
-Repository pakage = 데이터베이스와 연동시킬 코드들을 모아두는 곳
+**Repository package** = 데이터베이스와 연동시킬 코드들을 모아두는 곳
 Ex) DAO, Mapper
 
-Service pakage = 실제로 사용될 기능을 정리해 둔 코드를 모아둔 곳
+**Service package** = 실제로 사용될 기능을 정리해 둔 코드를 모아둔 곳
 Ex) Service
 
-Presentation pakage(Controller) = Service코드를 사용할 컨트롤러들을 모아둔 곳
+**Presentation package(Controller)** = Service코드를 사용할 컨트롤러들을 모아둔 곳
 Ex) Controller
