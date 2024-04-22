@@ -1,4 +1,4 @@
-package com.example.book.Repository.dto;
+package com.example.book.Repository;
 
 import com.example.book.domain.Posts.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;

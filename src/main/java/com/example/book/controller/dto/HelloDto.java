@@ -1,4 +1,4 @@
-package com.example.book.Repository.dto;
+package com.example.book.controller.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

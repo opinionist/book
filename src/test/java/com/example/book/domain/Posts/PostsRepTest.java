@@ -1,6 +1,6 @@
 package com.example.book.domain.Posts;
 
-import com.example.book.Repository.dto.PostsRep;
+import com.example.book.Repository.PostsRep;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,6 +1,6 @@
 package com.example.book.domain;
 
-import com.example.book.Repository.dto.HelloDto;
+import com.example.book.controller.dto.HelloDto;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
