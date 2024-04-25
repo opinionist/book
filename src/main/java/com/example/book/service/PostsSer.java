@@ -3,6 +3,7 @@ package com.example.book.service;
 import com.example.book.Repository.PostsRep;
 import com.example.book.controller.dto.PostsDto;
 import com.example.book.controller.dto.PostsResDto;
+import com.example.book.controller.dto.PostsUpDto;
 import com.example.book.domain.Posts.Posts;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ public class PostsSer {
     }
 
     @Transactional
-    public Long update(Long id, PostsResDto requestDto) {
+    public Long update(Long id, PostsUpDto requestDto) {
         Posts posts = postsRep.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
 
         posts.update(requestDto.getTitle(), requestDto.getContent());

@@ -2,7 +2,7 @@ package com.example.book.controller;
 
 import com.example.book.Repository.PostsRep;
 import com.example.book.controller.dto.PostsDto;
-import com.example.book.controller.dto.PostsResDto;
+import com.example.book.controller.dto.PostsUpDto;
 import com.example.book.domain.Posts.Posts;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -61,26 +61,27 @@ class PostsControllerTest {
     }
 
     @Test
-    public void postM() throws Exception{
+    public void postM() {
         Posts saved = postsRep.save(Posts.builder().
                 title("title")
                 .content("content")
                 .author("author").build());
 
-        Long updateid = saved.getId();
+        Long id = saved.getId();
         String expectTitle = "title2";
         String expectContent = "content2";
 
-        PostsDto requestDto = PostsDto.builder()
+        PostsUpDto requestDto = PostsUpDto.builder()
+                .id(id)
                 .title(expectTitle)
                 .content(expectContent)
                 .build();
 
-        String url = "http://localhost:" + port + "/api/vi/posts/" + updateid;
+        String url = "http://localhost:" + port + "/api/vi/posts/" + id;
 
-        HttpEntity<PostsDto> requestEntity = new HttpEntity<>(requestDto);
+            HttpEntity<PostsUpDto> requestEntity = new HttpEntity<>(requestDto);
 
-        ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
+            ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
