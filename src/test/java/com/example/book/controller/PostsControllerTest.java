@@ -79,9 +79,9 @@ class PostsControllerTest {
 
         String url = "http://localhost:" + port + "/api/vi/posts/" + id;
 
-            HttpEntity<PostsUpDto> requestEntity = new HttpEntity<>(requestDto);
+        HttpEntity<PostsUpDto> requestEntity = new HttpEntity<>(requestDto);
 
-            ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
+        ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);
